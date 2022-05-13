@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+     background: #ffffff;
+}
+
+.wrapper .sidebar{
+    background-color: rgb(118, 186 , 27, 0.8);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 244px;
+    height: 100%;
+    padding: 20px 0;
+    transition:  all 0.5s ease;
+}
+
+.wrapper .sidebar .logo img{
+    display: block;
+    width: 189px;
+    height: 148px;
+    margin: 0 auto;
+    margin-top: 61px;
+}
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 0px 33px;
+    border-bottom: 1px #1E5631;
+    color: #1E5631;
+    font-size: 25px;
+    position: relative;
+    margin-top: 30%;
+}
+
+.wrapper .sidebar ul li .logout{
+    display: block;
+    color: #1E5631;
+    font-size: 25px;
+    position: relative;
+    margin-top: 260%;
+}
+
+
+.wrapper .sidebar ul li a .icon{
+    color: #1E5631;    
+    display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active,
+.wrapper .sidebar ul li .logout:hover{
+    color: #1E5631;
+    background: #ffffff;
+    border-right:2px solid #1E5631;
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: #1E5631;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+.wrapper .section{
+width: calc(100% - 244px);
+margin-left: 244px;
+transition: all 0.5s ease;
+}
+    
+.wrapper .section .top_navbar{
+background: #ACDF87;
+height: 50px;
+display: flex;
+align-items: center;
+padding: 0 30px;  
+padding-left: 0 30px; 
+ }
+
+ .wrapper .section .top_navbar .hamburger a{
+    font-size: 28px;
+    color: #1E5631;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+    color: #ffffff;
+}
+body.active .wrapper .sidebar{
+    left: -244px;
+}
+body.active .wrapper .section{
+    margin-left: 0;
+    width: 100%;
+}
+
+.wrapper .section .top-logo img{
+   margin-left: 42vw;
+}
+
+
+section {
+    width: 100%;
+    position: relative;
+    top: 17vh;
+}
+
+.inputboxes {
+    width: 100%;
+    text-align: center;
+}
+
+.inout-box {
+    padding: 40px;  
+}
+
+
+.inout-box h2 {
+    color: #1E5631;
+    opacity: .6;
+    position: relative;
+    right: 21.5%;
+}
+
+input {
+    background: #76BA1B;
+    border: 3px solid #FFF9F9;
+    border-radius: 50px;
+    width: 48vw;
+    height: 80px;
+    padding-left: 3%;
+    font-size: 26px;
+    padding-right: 20px;
+}
+::placeholder {
+    font-family:  Helvetica;
+    font-size: 32px;
+    margin:20px;
+    color: #FFF9F9;
+    opacity: .6;
+    position: absolute;
+    left: 5%;
+}
+
+.two {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.p-price {
+    width: 25vw;
+    position: relative;
+    
+}
+
+.p-quantity {
+    width: 21vw;
+    position: relative;
+    right: 3%;
+}
+
+.quantity1{
+    position: relative;
+    left: 5%;
+    margin-top: -1.5%;
+}
+.price{
+    position: relative;
+    left: 110px;
+    margin-top: -1.5%;
+ }
+
+
+ button {
+    font-family: Helvetica;
+    font-size: 38px;
+    line-height: 1px;
+     width:246px;
+     height: 70px;
+     border-radius: 50px;
+     background-color: #1E5631;
+     color: #ACDF87;
+     border : 3px solid #FFF9F9;
+     position: absolute;
+     right:26%;
+    cursor: pointer;
+ }
+ button:hover{
+     background-color: #ACDF87;
+     color: #1E5631;
+     border: 3px solid #1E5631;
+ }
+
+  /* Media Queries */
+@media  screen and (max-width:1440px){
+    input{
+        width: 54vw;
+    }
+    .p-quantity{
+        width: 24vw;
+        right: 5%;
+    }
+    .p-price{
+        width: 28vw;
+    }
+    .quantity1{
+        margin-top: -2%;
+    }
+    .price{
+        margin-top: -2%;
+    }
+}
+
+@media screen and (max-width:1024px){
+    input,
+    input::-webkit-input-placeholder{
+        font-size: 26px;
+        width: 61vw;
+        line-height: 36px;
+    }
+    .p-price{
+        width: 25vw;
+        left: -4%;
+    }
+    .p-quantity{
+        width: 25vw;
+        right: 2%;
+    }
+    .wrapper .section .top-logo img{
+        margin-left: 36vw;
+    }
+    button{
+        right: 19%;
+    }
+    .price{
+        left: 73px;
+        margin-top: -3%;
+    }
+    .quantity1{
+        left: 12%;
+        margin-top: -3%;
+    }
+
+}
+@media  screen and (max-width:768px){
+    input,
+    input::-webkit-input-placeholder{
+        font-size: 21px;
+        width: 68vw;
+        line-height: 36px;
+    }
+    .two {
+        display: block;
+        width: 80vw;
+        left: 1%;
+        top: 9%;
+        padding: 22px;
+    }
+    .p-price{
+        left: 6%;
+        width: 68vw;
+    }
+    .p-quantity{
+        width: 68vw;
+        right: -6%;
+        margin-top: 17%;
+    }
+    .price{
+        left: -19vw;
+    }
+    .quantity1{
+        top: 15.5vh;
+        left: -17vw;
+    }
+    .inout-box h2{
+        right: 22vw;
+    }
+    .wrapper .section .top-logo img{
+        margin-left: 31vw;
+    }
+
+}
+
+@media screen and (max-width:468px){
+
+    input,
+    input::-webkit-input-placeholder{
+        font-size: 25px;
+        width: 83vw;
+        line-height: 36px;
+    }
+
+    .inout-box {
+        padding: 25px;
+        padding-bottom: 0px;
+    }
+    .inout-box h2 {
+        right: 26%;
+    }
+
+    .two {
+        display: block;
+        width: 83vw;
+        left: 1%;
+        top: 9%;
+        padding: 22px;
+    }
+    .p-price { 
+        width: 83vw;
+        left: -4%;
+    }
+    .p-quantity {
+        width: 83vw;
+        right: 1%;
+        left: -4%;
+        margin-top: 17%;
+    }
+
+    ::placeholder {
+        
+        font-size: 24px;
+        
+    }
+
+    button {
+        height: 68px;
+        margin-top: 10%;
+    }
+    .wrapper .section .top-logo img{
+        position: static;
+        margin-left: 18vw;
+        top: 0.5%;
+    }
+
+    .price{
+        left: -86px;
+    }
+    .quantity1{
+        left: -22%;
+        top: 8vh;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+background: #ffffff;
+}
+
+.wrapper .sidebar{
+    background-color: rgb(118, 186 , 27);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 244px;
+    height: 100%;
+    padding: 20px 0;
+    transition:  all 0.5s ease;
+}
+
+.wrapper .sidebar .logo img{
+    display: block;
+    width: 189px;
+    height: 148px;
+    margin: 0 auto;
+    margin-top: 61px;
+}
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 0px 33px;
+    border-bottom: 1px #1E5631;
+    color: #1E5631;
+    font-size: 25px;
+    position: relative;
+    margin-top: 30%;
+}
+
+.wrapper .sidebar ul li .logout{
+    display: block;
+    color: #1E5631;
+    font-size: 25px;
+    position: relative;
+    margin-top: 260%;
+}
+
+
+.wrapper .sidebar ul li a .icon{
+    color: #1E5631;    
+    display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active,
+.wrapper .sidebar ul li .logout:hover{
+    color: #1E5631;
+    background: #ffffff;
+    border-right:2px solid #1E5631;
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: #1E5631;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+.wrapper .section{
+width: calc(100% - 244px);
+margin-left: 244px;
+transition: all 0.5s ease;
+}
+    
+.wrapper .section .top_navbar{
+background: #ACDF87;
+height: 50px;
+display: flex;
+align-items: center;
+padding: 0 30px;  
+padding-left: 0 30px; 
+ }
+ 
+ .wrapper .section .top_navbar .hamburger a{
+    font-size: 28px;
+    color: #1E5631;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+    color: #ffffff;
+}
+body.active .wrapper .sidebar{
+    left: -244px;
+}
+body.active .wrapper .section{
+    margin-left: 0;
+    width: 100%;
+}
+
+.wrapper .section .top-logo img{
+    margin-left: 42vw;
+}
+
+#product{
+    border-collapse: collapse;
+    margin-left: 5%;
+    margin-right: auto;
+    margin-top: 10%;
+    width: 90vw;
+    margin-bottom: 2%;
+}
+
+body:not(.active) #product{
+    width: calc(90vw - 244px);
+    margin-left: 327px;
+}
+
+#product td, #product th{
+    border:2px solid #76BA1B;
+    padding: 51px;
+}
+
+
+#product th, #product td{
+    padding-top: 9px;
+    padding-bottom: 9px;
+    text-align: center;
+    background-color: #ACDF87;
+    color: #1E5631;
+}
+
+#product img{
+    width: 60px;
+    object-fit: cover;
+}
+
+
+.btn{
+    background-color: #ACDF87;
+    border: none;
+    color:#1E5631 ;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer; 
+}
+.btn:hover{
+    background-color: #1E5631;
+    color: #ffffff;
+}
+
+h1{
+    position: absolute;
+    z-index: 0;
+    top: 94px;
+    left: 17%; 
+    color: #1E5631;   
+}
+
+  
+  .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 1px solid #000000;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 14px 0 0 14px;
+    outline: none;
+    color: rgb(118, 186 , 27, 0.3);
+  }
+  
+  .searchTerm:focus{
+    color: rgba(0, 0, 0);
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #1E5631;
+    background: #ffffff;
+    text-align: center;
+    color: #1E5631;
+    border-radius: 0 14px 14px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .wrap{
+    width: 26%;
+    position: absolute;
+    top: 110px;
+    left: 82%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media only screen and (max-width: 620px) {
+       #product {
+           margin-top: 21%;
+           width: 130vh;
+       }
+  }
+  @media only screen and (max-width:1600px) {
+      .wrapper .section .top-logo img{
+        margin-left: 36vw;
+    }
+  }
+  @media only screen and (max-width:850px){
+      h1{
+          top: 75px;
+      }
+      .wrap{
+          top: 90px;
+      }
+  }
+  @media only screen and(max-width:768px){
+    .wrapper .section .top-logo img{
+        margin-left: 31vw;
+    }
+  }
+  @media only screen and (max-width: 425px) {
+    #product {
+        margin-top: 40%;
+        width: 130vh;
+    }
+    .wrapper .section .top-logo img{
+        margin-left: 19vw;
+    }
+    .wrap{
+        top: 160px;
+        width: 94%;
+        left: 52%;
+    }
+    h1{
+        top: 75px;
+        margin-left: auto;
+       margin-right: auto;
+    }
+}
+
+ 

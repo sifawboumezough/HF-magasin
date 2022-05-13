@@ -1,0 +1,317 @@
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+ 
+ 
+*{
+ margin:0;
+ padding: 0;
+ box-sizing: border-box;
+
+}
+ body {
+    background-image:url('/images/background.png');
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+} 
+
+.logo img {
+    width: 348px;
+    height: 161px;
+    margin-left: 4%;
+    top: 8%;
+}
+
+
+
+form {
+    display: flex;
+    margin-bottom: 1%;
+}
+.text-form {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    line-height: 36px;
+    width: 45%;
+
+}
+.text-box{
+    padding: 20px;
+    color: #fff;
+}
+
+.wlc-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    align-items: flex-start;
+    margin: 60px auto;
+}
+.wlc-text h2 {
+    font-family:  'Helvetica' ;
+    color: #fff;
+}
+
+.heal{
+    color: #76BA1B;
+}
+.fd {
+    color: #ACDF87;
+}
+
+
+.container {
+    width: 100%;
+    padding: 40px 40px;
+}
+
+.container .form-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 7%;
+    
+} 
+
+
+.container .form-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    
+} 
+
+
+
+form .form-content .input-box{
+    height: 60px;
+    width: 100%;
+    position: relative;
+
+    
+}
+
+input {
+    font-family:  Helvetica;
+    font-size:32px;
+    line-height: 12px;
+    background :#76BA1B;
+    display: block;
+    border: 3px solid #FFF9F9;
+    border-radius: 50px;
+    width: 43vw;
+    height: 90px;
+    padding: 5px;
+    margin-top: 15%;
+    padding-left: 10%;
+}
+
+input:after {
+    border: 3px solid #FFF9F9;
+    border-radius: 20px;
+}
+
+button {
+    color: #fff;
+    font-family:  Helvetica;
+    font-size:38px ;
+    line-height: 12px;
+    background: #68BB59;
+    padding: 10px 15px;
+    width: 290px;
+    height: 87px;
+    border-radius: 50px;
+    position: absolute;
+    left: 34%;
+    top: 267%;
+}
+
+input#checkbox.checkbx {
+    color: blue;
+    width: 21px;
+    position: absolute;
+    top: -90%;
+    left: 4%;
+}
+
+.input-checkbox {
+    width: 100%;
+    color: #fff;
+    margin-top: -7%;    
+}
+
+
+.remember {
+    width: 110px;
+    font-family: Helvetica;
+    position: absolute;
+    left: 8%;
+    bottom: -118%;
+    text-decoration: none;
+    color: white;
+}
+.remember a {
+    color: #fff;
+    
+}
+
+.text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    width: 135px;
+    margin-top: -6%;
+    margin-bottom: 34px;
+    margin-left: 83%;
+    
+}
+.text a {
+    color: #fff;
+    position: absolute;
+    bottom: 34.5%;
+}
+
+
+::placeholder {
+    margin:20px;
+    color: #fff;
+    opacity: .6;
+    font-family:  Helvetica;
+    font-size: 32px;
+    position: absolute;
+    margin-left: 8% ;
+    
+  }
+  .fa-envelope:before {
+    font-size: 31.5px;
+    color: #fff;
+    opacity: .6;
+    position: absolute;
+    top: 56%;
+    left: 4%;
+}
+  
+
+.fa-lock:before {
+    color: #fff;
+    opacity: .6;
+    font-size: 31.5px;
+    position: absolute;
+    top: 52%;
+    left: 6%;
+}
+
+
+
+.error {
+    color:#fff;
+    opacity: .6;
+    font-weight: bold;
+    padding:10px;
+    width:39%;
+    border-radius: 5px;
+    position: absolute;
+    top: 17%;
+    right: 8.5%;
+    text-align: center;
+    font-family:  Helvetica;
+    font-size: 32px;
+}
+ 
+ 
+
+@media only screen and (max-width: 1440px){
+  button{
+      left: 29%;
+  }
+  .remember{
+      bottom: -126%;
+      left : 10%;
+  }
+  input#checkbox.checkbx {
+    top: -22%;
+}
+}
+@media only screen and (max-width: 1024px){
+    .text-form{
+        display: none;
+    }
+    form{
+        justify-content: center;
+    }
+    input{
+        width: 69vw;
+        position: relative;
+        right: 7%;
+    }
+    input#checkbox.checkbx {
+           top: -54%;
+        left: 5%;
+        
+    }
+    .remember{
+        bottom: -116%;
+    }
+    .logo img{
+        display: block;
+        margin-right: auto;
+        margin-left: 30%;
+    }
+
+    .fa-envelope:before {
+        position: absolute;
+        left: 0%;
+    }
+
+    .fa-lock:before {
+        position: absolute;
+        left: 0%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    button{
+        left: 24%;
+    }
+    input#checkbox.checkbx {
+        top: -9%;
+    }
+}
+@media only screen and (max-width: 425px){
+    input{
+        width: 90vw;
+        height: 80px;
+        padding: 0;
+        padding-left: 12%;
+        position: relative;
+        right: 3%;
+    }
+    button{
+        left: 11%;
+        height: 69px;
+    }
+    input#checkbox.checkbx {
+        left: 3%;
+        top: 31%;
+    }
+    .remember{
+        bottom: -110%;
+    }
+    .fa-envelope:before{
+        font-size: 27px;
+        top: 44%;
+        left: 4%;
+    }
+    .fa-lock:before {
+        font-size: 27px;
+        top: 44%;
+        left: 4%;
+    }
+
+    .logo img {
+        margin-left: -4%;
+    }
+    
+}
+
